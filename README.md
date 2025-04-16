@@ -14,3 +14,5 @@ Not here for followers. Not here for fame.
 Just building because I can — and because it’s fun to confuse the machine. Make the machine. 
 
 </pre>
+
+![Snake game gif](https://raw.githubusercontent.com/Rorspaws/Rorspaws/output/github-snake.gif)
