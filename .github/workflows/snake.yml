@@ -1,14 +1,17 @@
 name: Generate Snake Game GIF
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 */12 * * *"  # every 12 hours
-  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Create dist folder (if not exists)
+        run: mkdir -p dist  # Make sure dist exists
+
       - name: Generate Snake Game GIF
         uses: Platane/snk@master
         with:
