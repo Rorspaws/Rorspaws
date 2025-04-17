@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create dist folder (if not exists)
-        run: mkdir -p dist  # Make sure dist exists
+        run: mkdir -p dist  # Ensure dist folder exists
 
       - name: Generate Snake Game GIF
         uses: Platane/snk@master
@@ -18,6 +18,9 @@ jobs:
           github_user_name: Rorspaws
           outputs: |
             dist/github-snake.gif
+
+      - name: List files in dist folder (Debug)
+        run: ls -al dist
 
       - name: Push GIF to output branch
         uses: crazy-max/ghaction-github-pages@v2.1.3
